@@ -5,14 +5,14 @@ def print_times():
     # Get the current local time
     local_time = datetime.now()
 
-    # Format the local time as a string
-    formatted_local_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+    # Format the local time as a string with timezone offset
+    formatted_local_time = local_time.strftime("%Y-%m-%d %H:%M:%S %z")
 
     # Get the current time in GMT
     gmt_time = datetime.now(timezone.utc)
 
     # Format the GMT time as a string
-    formatted_gmt_time = gmt_time.strftime("%Y-%m-%d %H:%M:%S")
+    formatted_gmt_time = gmt_time.strftime("%Y-%m-%d %H:%M:%S %z")
 
     # Print the local time and GMT time
     print(f"Current local time: {formatted_local_time}")
@@ -21,4 +21,3 @@ def print_times():
 
 if __name__ == "__main__":
     print_times()
-
